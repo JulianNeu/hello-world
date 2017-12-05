@@ -16,7 +16,7 @@ Public Class Form1
     Public rechenzeichen As String
     Public ispreviewhandeled As Boolean
     Public pfad As String, txtTmp As String
-    'Dim Config As New Taschenrechner.My.MySettings
+    Dim Config As New Taschenrechner.My.MySettings
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Config.Merkpfad = Config.Pfad
         Config.Merkfarbe = Config.Farbe
@@ -534,7 +534,8 @@ Public Class Form1
     Private Sub KonfigurationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KonfigurationToolStripMenuItem.Click
         Konfiguration.Show()
     End Sub
-    Private Sub SchließenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SchließenToolStripMenuItem.Click
+    Private Sub SchließenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SchließenToolStripMenuItem.Clic
+        MsgBox("Danke für die Benutzung des Taschenrechners. Schönen Tag noch :")
         Close()
     End Sub
 End Class
